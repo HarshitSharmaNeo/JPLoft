@@ -26,9 +26,12 @@ const Home = () => {
                         <Image source={{ uri: 'https://cdn.pixabay.com/photo/2014/07/09/10/04/man-388104_1280.jpg' }}
                             style={styles.image} />
                     </View>
-                    <Text style={styles.txt2}>{data[3]?.name}</Text>
+                    <Text style={[styles.txt2, {
+                        maxWidth: '70%',
+                        maxHeight: 90,
+                    }]}>{data[3]?.name}</Text>
                     <Text style={styles.txt1}>{'Gwalior, India'}</Text>
-                    <View style={{ flexDirection: 'row' }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <Text style={styles.txt1}>{'Religon: '}</Text>
                         <Text style={styles.txt}>{'Hindu'}</Text>
                     </View>
@@ -39,7 +42,7 @@ const Home = () => {
                 <View style={styles.dynamic}>
                     <FlatList
                         style={{
-                            marginBottom: 150
+                            marginBottom: 0
                         }}
                         data={data}
                         showsVerticalScrollIndicator={false}
@@ -56,7 +59,7 @@ const Home = () => {
                                     maxHeight: 80,
                                 }]}>{item?.name ?? ''}</Text>
                                 <Text style={styles.txt1}>{'Gwalior, India'}</Text>
-                                <View style={{ flexDirection: 'row' }}>
+                                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                     <Text style={styles.txt1}>{'Religon: '}</Text>
                                     <Text style={styles.txt}>{'Hindu'}</Text>
                                 </View>
@@ -137,10 +140,10 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     static: {
-        height: 500,
+        height: 350,
     },
     dynamic: {
-        height: 500,
+        height: 350,
         width: '49%',
         marginTop: 25,
     },
@@ -189,6 +192,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignSelf: 'center',
         marginTop: 10,
-        marginBottom: 25,
+        marginBottom: 22,
     },
 })
