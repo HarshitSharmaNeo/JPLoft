@@ -78,7 +78,7 @@ export default CustomBottomTab;
 
 const styles = StyleSheet.create({
     mainView: {
-        height: 80,
+        height: 70,
         width: '100%',
         backgroundColor: 'white',
         borderTopLeftRadius: 25,

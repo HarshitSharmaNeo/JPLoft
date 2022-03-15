@@ -27,8 +27,8 @@ const Home = () => {
                             style={styles.image} />
                     </View>
                     <Text style={[styles.txt2, {
-                        maxWidth: '70%',
-                        maxHeight: 90,
+                        maxWidth: '90%',
+                        maxHeight: 70,
                     }]}>{data[3]?.name}</Text>
                     <Text style={styles.txt1}>{'Gwalior, India'}</Text>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -55,8 +55,8 @@ const Home = () => {
                                         style={styles.image} />
                                 </View>
                                 <Text style={[styles.txt2, {
-                                    maxWidth: '78%',
-                                    maxHeight: 80,
+                                    maxWidth: '90%',
+                                    maxHeight: 70,
                                 }]}>{item?.name ?? ''}</Text>
                                 <Text style={styles.txt1}>{'Gwalior, India'}</Text>
                                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -121,6 +121,9 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         padding: 10,
+        color: 'black',
+        height: 70,
+        width: '90%',
     },
     txt3: {
         fontSize: 14,
@@ -144,12 +147,13 @@ const styles = StyleSheet.create({
     },
     dynamic: {
         height: 350,
-        width: '49%',
-        marginTop: 25,
+        width: '48%',
+        marginTop: 20,
     },
     image: {
         height: 160,
         width: 160,
+        resizeMode: 'cover',
         borderRadius: 25,
     },
     image1: {
@@ -182,6 +186,7 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: 0,
     },
     buttonLong: {
         backgroundColor: '#EC407A',
@@ -192,6 +197,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignSelf: 'center',
         marginTop: 10,
-        marginBottom: 22,
+        marginBottom: 4.4,
     },
 })
